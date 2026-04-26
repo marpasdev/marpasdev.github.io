@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --accent-color: #00aa00;
+    --text-color: #e5e5e5;
+    --bg-color: #1f1f20;
+    --font-main: 'Courier New', monospace;
+    --font-monospace: 'Courier New', monospace; 
+    --spacing: 1rem;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: var(--spacing);
+}
+
+p {
+    margin-bottom: var(--spacing);
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.125rem 0.25rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--bg-color);
+}
+
+header h1 {
+    font-family: var(--font-monospace);
+    color: var(--accent-color);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+nav a {
+    font-family: var(--font-monospace);
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+nav a::before {
+    content: "~/";
+}
+
+nav a:hover {
+    text-decoration: underline;
+    content: "cd ";
+}
+
+@media (max-width: 800px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 0.25rem;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.25rem 0;
+    }
+}
+
+section {
+    height: 100vh;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;;
+}
+
+.technology-grid {
+    display: grid;
+}
+
+.technology-card img {
+    width: 50px;
+}
+
+.technology-card h3 {
+    margin: 5px auto;
+}
+
+footer {
+    text-align: center;
+}
