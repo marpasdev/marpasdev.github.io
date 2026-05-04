@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Marek Pastva - Personal Webpage</title>
+    <title>Marek Pastva | Personal Webpage</title>
+    <link rel="icon" type="image/x-icon" href="images/c.png">
 </head>
 <body>
     <div class="top-bar">
         <header>
             <a href="#"><h1>Marpas</h1></a>
         </header>
+        <a id="hamburger" href="#">
+            ls
+        </a>
             <nav>
-            <ul>
+            <ul id="nav-links">
                 <a href="#about">about</a>
                 <a href="#technologies">technologies</a>
                 <a href="#portfolio">portfolio</a>
@@ -52,7 +56,7 @@
                     <h3>Haskell</h3>
                 </div>
                 <div class="technology-card">
-                    <img src="" alt="SQL">
+                    <img src="images/db.png" alt="SQL">
                     <h3>SQL</h3>
                 </div>
             </div>
@@ -61,17 +65,22 @@
             <h2>portfolio</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <img src="" class="project-img" alt="">
-                    <h3>Project</h3>
-                    <p>Date specified here</p>
-                    <p>This is the description of the project.</p>
-                    <div class="project-technologies">
-                        <img src="images/cpp.png" alt="C++" class="project-technology-image">
+                    <img src="images/topdown.png" class="project-img" alt="">
+                    <h3>Topdown Game Prototype</h3>
+                    <p class="project-date">2026</p>
+                    <p>A reusable template for topdown games made in MonoGame.</p>
+                    <div class="project-lower-bar">
+                        <div class="project-technologies">
+                            <img src="images/csharp.png" alt="C#" class="project-technology-image">
+                        </div>
+                        <a href="https://github.com/marpasdev/topdown-prototype"
+                        target="_blank"><img src="images/github.png" alt="Github" class="project-technology-image"></a>
                     </div>
+
                 <!-- <div class="project-card">
                     <img src="" class="project-img" alt="">
                     <h3>Project</h3>
-                    <p>Date specified here</p>
+                    <p class="project-date">2026</p>
                     <p>This is the description of the project.</p>
                     <div class="project-technologies">
                         <img src="images/cpp.png" alt="C++" class="project-technology-image">
@@ -98,7 +107,8 @@
     <footer>
         <p>
             &copy; 2026 Marek Pastva<br>
-            All trademarks and logos belong to their respective owners.
+            All trademarks and logos belong to their respective owners.<br>
+            <a href="https://www.flaticon.com/free-icons/sql" title="sql icons">Sql icons created by meaicon - Flaticon</a>
         </p>
     </footer>
 </body>
