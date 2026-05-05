@@ -9,14 +9,16 @@
 </head>
 <body>
     <div class="top-bar">
+        <div class="closed-bar">
         <header>
             <a href="#"><h1>Marpas</h1></a>
         </header>
-        <a id="hamburger" href="#">
+        <button class="hamburger" id="hamburger">
             ls
-        </a>
+        </button>
+        </div>
             <nav>
-            <ul id="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <a href="#about">about</a>
                 <a href="#technologies">technologies</a>
                 <a href="#portfolio">portfolio</a>
@@ -76,31 +78,68 @@
                         <a href="https://github.com/marpasdev/topdown-prototype"
                         target="_blank"><img src="images/github.png" alt="Github" class="project-technology-image"></a>
                     </div>
+                </div>
 
-                <!-- <div class="project-card">
+                <div class="project-card">
                     <img src="" class="project-img" alt="">
-                    <h3>Project</h3>
+                    <h3>Blank Project</h3>
                     <p class="project-date">2026</p>
-                    <p>This is the description of the project.</p>
-                    <div class="project-technologies">
-                        <img src="images/cpp.png" alt="C++" class="project-technology-image">
+                    <p>This is a placeholder project.</p>
+                    <div class="project-lower-bar">
+                        <div class="project-technologies">
+                            <img src="images/cpp.png" alt="C++" class="project-technology-image">
+                            <img src="images/csharp.png" alt="C#" class="project-technology-image">
+                            <img src="images/haskell.png" alt="Haskell" class="project-technology-image">
+                        </div>
+                        <a href="https://github.com/marpasdev/topdown-prototype"
+                        target="_blank"><img src="images/github.png" alt="Github" class="project-technology-image"></a>
                     </div>
-                </div> -->
+                </div>
+                <div class="project-card">
+                    <img src="" class="project-img" alt="">
+                    <h3>Blank Project</h3>
+                    <p class="project-date">2026</p>
+                    <p>This is a placeholder project.</p>
+                    <div class="project-lower-bar">
+                        <div class="project-technologies">
+                            <img src="images/cpp.png" alt="C++" class="project-technology-image">
+                            <img src="images/csharp.png" alt="C#" class="project-technology-image">
+                            <img src="images/haskell.png" alt="Haskell" class="project-technology-image">
+                        </div>
+                        <a href="https://github.com/marpasdev/topdown-prototype"
+                        target="_blank"><img src="images/github.png" alt="Github" class="project-technology-image"></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="" class="project-img" alt="">
+                    <h3>Blank Project</h3>
+                    <p class="project-date">2026</p>
+                    <p>This is a placeholder project.</p>
+                    <div class="project-lower-bar">
+                        <div class="project-technologies">
+                            <img src="images/cpp.png" alt="C++" class="project-technology-image">
+                            <img src="images/csharp.png" alt="C#" class="project-technology-image">
+                            <img src="images/haskell.png" alt="Haskell" class="project-technology-image">
+                        </div>
+                        <a href="https://github.com/marpasdev/topdown-prototype"
+                        target="_blank"><img src="images/github.png" alt="Github" class="project-technology-image"></a>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="contact">
             <div class="contact-text">
                 <h2>contact</h2>
-                Don't hesitate to contact me.
+                If you have any questions, don't hesitate to contact me.
             </div>
             <div class="contact-form">
                 <label>Email</label>
                 <input>
                 <label>Subject</label>
                 <input>
-                <label>Message</label>
-                <input>
-                <button class="submit-button">Submit</button>
+                <label >Message</label>
+                <textarea class="message-body"></textarea>
+                <button class="submit-button">Send</button>
             </div>
         </section>
     </main>
@@ -111,5 +150,7 @@
             <a href="https://www.flaticon.com/free-icons/sql" title="sql icons">Sql icons created by meaicon - Flaticon</a>
         </p>
     </footer>
+
+    <script src="scripts/hamburger.js"></script>
 </body>
 </html>

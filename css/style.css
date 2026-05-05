@@ -52,7 +52,9 @@ header a {
     text-decoration: none;
 }
 
+
 header a h1 {
+    display: inline-block;
     font-family: var(--font-monospace);
     color: var(--accent-color);
     font-size: 1.6rem;
@@ -61,7 +63,6 @@ header a h1 {
     padding-right: 0.5rem;
 }
 
-
 nav a {
     font-family: var(--font-monospace);
     color: var(--accent-color);
@@ -69,9 +70,7 @@ nav a {
     text-decoration: none;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-}
-
-nav a:hover {
+    border-bottom: 1px solid transparent;
 }
 
 nav a::before {
@@ -79,7 +78,9 @@ nav a::before {
 }
 
 nav a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    border-bottom: 1px solid var(--accent-color);
+    transition: border-bottom 0.1s;
 }
 
 #hamburger {
@@ -87,24 +88,43 @@ nav a:hover {
     text-decoration: none;
     color: var(--accent-color);
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 @media (max-width: 800px) {
-    .nav-links {
+    .top-bar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .closed-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .nav {
         flex-direction: column;
         align-items: flex-start;
         flex-wrap: wrap;
         padding-left: 0.25rem;
         width: 100%;
         display: none;
+        border-bottom: 1px solid var(--accent-color);
     }
 
-    .nav-links .open {
+    .open {
         display: flex;
     }
 
     #hamburger {
         display: inline-block;
+        min-width: 70px;
+        background-color: transparent;
+        border: none;
+        font-family: var(--font-main);
+        margin: 0px;
     }
 
     nav a {
@@ -116,7 +136,7 @@ nav a:hover {
 
 section {
     min-height: 100vh;
-    max-width: 1000px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 20px 10px;
     scroll-margin-top: 80px;
@@ -150,7 +170,7 @@ section {
     height: 300px;
     object-fit: cover;
     border-radius: 5%;
-    background-color: var(--accent-color);
+    background-color: var(--text-color);
 }
 
 /********** TECHNOLOGIES SECTION **********/
@@ -202,20 +222,21 @@ section {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+    grid-template-columns: repeat(auto-fit, 400px);
     justify-content: center;
-    justify-items: center;
-    align-items: center;
+    /* justify-items: center; */
+    /* align-items: center; */
     gap: 2rem;
-    margin: 0 auto;
-    width: 100%;
+    /* margin: 0 auto; */
+    /* width: 100%; */
+    /* margin-bottom: 30vh; */
 }
 
 .project-card {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    width: 400px;
-    height: 400px;
+    width: 420px;
+    height: 420px;
     border: 2px;
     border-style: solid;
     border-color: var(--accent-color);
@@ -224,7 +245,7 @@ section {
 }
 
 .project-img {
-    background: var(--accent-color);
+    background: var(--text-color);
     width: 90%;
     height: 60%;
     margin: 0px auto;
@@ -254,13 +275,23 @@ section {
 
 /********** CONTACT SECTION **********/
 #contact {
+    max-width: 800px;
     display: flex;
     justify-content: space-around;
+    /* align-items: center; */
+    margin: auto auto;
+    padding-top: 10vh;
+}
+
+#contact h2 {
+    text-align: center;
 }
 
 .contact-text {
     display: flex;
     flex-direction: column;
+    align-content: flex-start;
+    max-width: 400px;
 }
 
 .contact-form {
@@ -270,12 +301,39 @@ section {
 
 .contact-form input {
     min-height: 30px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.message-body {
+    min-height: 100px;
+    width: 200px;
+    margin-bottom: 10px;
 }
 
 .submit-button {
-    width: 100px;
+    width: 200px;
     margin: 5px auto;
-    height: 25px;
+    min-height: 30px;
+    width: 200px;
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 5px 15px;
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    border: solid 2px var(--accent-color);
+}
+
+.submit-button:hover {
+    color: var(--accent-color);
+    background-color: var(--bg-color);
+    border: solid 2px var(--accent-color);
+    font-weight: bold;
+    transition: background-color 0.1s, color 0.1s;
+    transition: 
 }
 
 footer {
